@@ -6,7 +6,6 @@ import { PasswordInput } from '@/src/components/PasswordInput';
 import { useAuth } from '@/src/hooks/useAuth';
 import { api } from '@/src/http/api';
 import { useRouter } from 'next/navigation';
-import './style.css';
 
 export default function LoginPage() {
   const router = useRouter();
