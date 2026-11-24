@@ -3,3 +3,17 @@
 body {
   font-family: var(--font-montserrat-sans);
 }
+
+@utility border-shadow {
+  @apply shadow-[0_0_1px_1px_rgba(0,0,0,0.1)];
+}
+
+/* @utility border-shadow {
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+} */
+
+@utility border-shadow-hover {
+  box-shadow:
+    0 0 1px 1px rgba(0, 0, 0, 0.1),
+    0 0 5px 1px rgba(0, 0, 0, 0.1);
+}
