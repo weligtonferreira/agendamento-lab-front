@@ -1,17 +1,19 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
+import { SubmitEvent } from 'react';
+
 import { Button } from '@/src/components/Button';
 import { Input } from '@/src/components/Input';
 import { PasswordInput } from '@/src/components/PasswordInput';
 import { useAuth } from '@/src/hooks/useAuth';
 import { api } from '@/src/http/api';
-import { useRouter } from 'next/navigation';
 
 export default function LoginPage() {
   const router = useRouter();
   const { signIn } = useAuth();
 
-  async function handleLogin(event: SubmitEvent) {
+  async function handleLogin(event: SubmitEvent<HTMLFormElement>) {
     event.preventDefault();
 
     const formData = new FormData(event.currentTarget as HTMLFormElement);
